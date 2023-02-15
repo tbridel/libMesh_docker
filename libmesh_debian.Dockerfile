@@ -78,3 +78,13 @@ RUN cd /tmp/ && \
     make && \
     make install
 ENV LIBMESH_DIR /opt/libmesh
+ENV LIBMESH_INCLUDE /opt/libmesh/include
+ENV LIBMESH_LIB /opt/libmesh/lib
+
+# User-friendliness
+ENV SHELL=/bin/bash
+RUN addgroup -g 1000 libmesh_container
+RUN adduser -u 2000 -G libmesh_container -s /bin/bash -D libmesh_user
+ENV PATH=/home/libmesh_user/.local/bin:$PATH
+RUN cp -r /opt/libmesh/examples /home/libmesh_user/.
+WORKDIR /home/libmesh_user
