@@ -4,7 +4,7 @@ ARG BASE_IMAGE=alpine:edge
 FROM ${BASE_IMAGE}
 
 # Dependencies
-RUN apk add --no-cache curl build-base gfortran clang perl cmake python3 linux-headers git m4
+RUN apk add --no-cache curl build-base gfortran clang perl cmake python3 linux-headers git m4 bash
 RUN ln -sf python3 /usr/bin/python && \
     python3 -m ensurepip && \
     pip3 install --no-cache --upgrade pip setuptools
@@ -63,8 +63,8 @@ ENV CXX /opt/petsc/bin/mpic++
 ENV CPPFLAGS -I/opt/slepc/include
 RUN cd /tmp/ && \
     git clone --recursive https://github.com/libMesh/libmesh.git && \
-    git checkout ${LIBMESH_SHA} && \
     cd `ls | grep libmesh` && \
+    git checkout ${LIBMESH_SHA} && \
     mkdir build && cd build && \
     ../configure --prefix=/opt/libmesh \
         --with-methods="opt dbg" \
