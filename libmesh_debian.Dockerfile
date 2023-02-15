@@ -86,5 +86,7 @@ ENV SHELL=/bin/bash
 RUN addgroup -g 1000 libmesh_container
 RUN adduser -u 2000 -G libmesh_container -s /bin/bash -D libmesh_user
 ENV PATH=/home/libmesh_user/.local/bin:$PATH
-RUN cp -r /opt/libmesh/examples /home/libmesh_user/.
 WORKDIR /home/libmesh_user
+
+RUN cp -r /opt/libmesh/examples /home/libmesh_user/.
+RUN ln -fs /opt/libmesh/share/reference_elements /home/libmesh_user/.
