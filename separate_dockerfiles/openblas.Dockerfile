@@ -16,4 +16,4 @@ RUN apk add --no-cache curl build-base gfortran clang perl linux-headers && \
     apk del curl build-base gfortran clang perl linux-headers && \
     rm -rf /usr/share/man/* /tmp/* /var/cache/apk/*
 
-LABEL maintainer="thibault[dot]bridelbertomeu[at]re[dash]cae[dot]com"
+LABEL maintainer="thibault[dot]bridelbertomeu[at]gmail[dot]com"

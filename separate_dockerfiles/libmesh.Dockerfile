@@ -38,4 +38,4 @@ RUN apk del curl build-base gfortran clang perl cmake git m4 python3 && \
 # Setup LibMesh location
 ENV LIBMESH_DIR /opt/libmesh
 
-LABEL maintainer="thibault[dot]bridelbertomeu[at]re[dash]cae[dot]com"
+LABEL maintainer="thibault[dot]bridelbertomeu[at]gmail[dot]com""

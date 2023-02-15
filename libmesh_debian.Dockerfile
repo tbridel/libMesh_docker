@@ -90,3 +90,5 @@ WORKDIR /home/libmesh_user
 
 RUN cp -r /opt/libmesh/examples /home/libmesh_user/.
 RUN ln -fs /opt/libmesh/share/reference_elements /home/libmesh_user/.
+
+LABEL maintainer="thibault[dot]bridelbertomeu[at]gmail[dot]com"

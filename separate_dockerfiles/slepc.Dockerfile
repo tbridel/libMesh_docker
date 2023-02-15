@@ -25,4 +25,4 @@ RUN apk add --no-cache curl build-base gfortran clang perl cmake python3 linux-h
 # Setup SLEPc location
 ENV SLEPC_DIR /opt/slepc
 
-LABEL maintainer="thibault[dot]bridelbertomeu[at]re[dash]cae[dot]com"
+LABEL maintainer="thibault[dot]bridelbertomeu[at]gmail[dot]com"
